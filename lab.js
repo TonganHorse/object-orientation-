@@ -462,21 +462,21 @@ myFirstMotorcycle.move(10000)
 
 //Code Here
 class Boat extends Vehicle {
-  constructor(capacity, color, mileage, nickName, type, isSeaworthy){
+  constructor(capacity, color, mileage, nickName, type){
     super(capacity, color, mileage)
     this.nickName = nickName,
     this.type = type, 
-    this.isSeaworthy = true
+    this.isSeaworthy = false
   }
   checkSeaworthiness() {
     if(this.isSeaworthy === true) {
-      console.log(`The ${color} ${type} ${nickName} is seaworthy`)
+      console.log(`seaworthy`)
     } else {
-      console.log(`You need to get your ${type} in order!`)
+      console.log(`You need to your boat in order!`)
     }
   }
   performMaintenance() {
-    this.isSeaworthy === true 
+    this.isSeaworthy = true
   }
 }
 
@@ -486,21 +486,24 @@ class Boat extends Vehicle {
 */
 
 //Code Here
-
+let myNewBoat = new Boat(12, 'red', 75000, 'tonga', 'sailboat',)
+console.log(myNewBoat)
 /*
   Call the checkSeaworthiness method on your new boat
 */
 
 //Code Here
+myNewBoat.checkSeaworthiness()
 
-/*
-  Now run the performMaintenance method on your boat
-*/
+// /
+//   Now run the performMaintenance method on your boat
+// */
 
 //Code Here 
-
+myNewBoat.performMaintenance()
 /*
   Check the seaworthiness once more (you should be ready for the water!)
 */
 
 //Code Here
+myNewBoat.checkSeaworthiness()
